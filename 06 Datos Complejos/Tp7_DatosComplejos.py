@@ -20,7 +20,6 @@ claves=precio_frutas.keys()
 lista_claves= list(claves)
 print(lista_claves)
 #Ejercicio 4
- """
 agenda={}
 for i in range(2):
     nombre=input(f"Ingresa el {i+1}° nombre: ")
@@ -31,3 +30,17 @@ if busqueda in agenda:
     print(f"el numero de {busqueda} es: {agenda[busqueda]}")
 else: 
     print(f"{busqueda} no existe.")
+ #Ejercicio 5
+frase=input("Ingresa una frase: ")
+palabras=frase.split()
+conjunto = set()
+diccionario = {}
+for palabra in palabras:
+    conjunto.add(palabra)
+    diccionario[palabra]=palabras.count(palabra)
+print(f"Palabras unicas: {conjunto}")
+print(f"Cantidad de veces: {diccionario}")
+ """
+
+ 
+    
