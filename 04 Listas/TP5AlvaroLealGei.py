@@ -197,12 +197,7 @@ while True:
     else:
         jugador="X"
 --------------------------------
-EJERCICIO 10 FALTA HACER TODAVIA
-
- Una tienda registra las ventas de 4 productos durante 7 días, en una matriz de 4x7.
-● Mostrar el total vendido por cada producto.
-● Mostrar el día con mayores ventas totales.
-● Indicar cuál fue el producto más vendido en la semana.
+EJERCICIO 10
 
 
 productos=4
@@ -290,7 +285,7 @@ for i in puntajes:
 
 
 mayorMenor=sorted(puntajes,reverse=True)
-indice=mayorMenor.index(990)
+indice=mayorMenor.index(990)    
 print(f"El puntaje mas alto es: {mayor} mientras que el mas bajo es: {menor}")
 print(f"Los puntajes ordenados de mayor a menor son los siguientes: {mayorMenor}")
 print(f"990 se encuentra en la posicion {indice+1} del ranking")
