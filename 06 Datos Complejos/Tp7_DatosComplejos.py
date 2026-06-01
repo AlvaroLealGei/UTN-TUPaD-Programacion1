@@ -30,17 +30,112 @@ if busqueda in agenda:
     print(f"el numero de {busqueda} es: {agenda[busqueda]}")
 else: 
     print(f"{busqueda} no existe.")
- #Ejercicio 5
+
+#Ejercicio 5
 frase=input("Ingresa una frase: ")
-palabras=frase.split()
-conjunto = set()
-diccionario = {}
+palabras= frase.split()
+conjunto=set()
+diccionario={}
 for palabra in palabras:
     conjunto.add(palabra)
     diccionario[palabra]=palabras.count(palabra)
 print(f"Palabras unicas: {conjunto}")
 print(f"Cantidad de veces: {diccionario}")
+#Ejercicio 6
+alumnos=[]
+for i in range(3):
+    nombre=input("Nombre: ")
+    notas=[]
+    for j in range(3):
+        nota=int(input("Nota: "))
+        notas.append(nota)
+    notas=tuple(notas)
+    alumno=(nombre, notas)
+    alumnos.append(alumno)
+print(alumnos)
+
+#Ejercicio 7
+asistencias=["Ana","Luis","Ana","Maria","Luis","Pedro","Ana"]
+print(asistencias)
+conjunto=set()
+diccionario={}
+for persona in asistencias:
+    conjunto.add(persona)
+    diccionario[persona]=asistencias.count(persona)
+print(f"Personas unicas: {conjunto}")
+print(f"Cantidad de veces: {diccionario}")
+
+#Ejercicio 8
+diccionario={
+    "Papas": 240,
+    "Sprite":300,
+    "Mani":140,
+    "Cerveza": 50
+}
+while True:
+    print("Ingresa la opcion que desees: ")
+    opcion=int(input("1. Consultar Stock | 2.Agregar un nuevo producto | 0.Salir: "))
+    if opcion==1:
+        selmenu=int(input("1. Consultar Stock | 2. Agregar Unidades: "))
+        if selmenu==1:
+            busqueda=input("Ingresa el nombre del producto: ").capitalize()
+            if busqueda in diccionario:
+                print(busqueda,diccionario[busqueda])
+            else:
+                print("El producto no existe")
+        elif selmenu==2:
+            busqueda=input("Ingresa el producto al que deseas agregar unidades: ").capitalize()
+            if busqueda in diccionario:
+                cantidad=int(input("Cuantos queres agregar? "))
+                diccionario[busqueda]+=cantidad
+                print(busqueda,diccionario[busqueda])
+
+        else:
+            print("Opcion fuera de rango.")
+    
+    elif opcion==2:
+        print("Agregar producto: ")
+        nuevo_producto=input("Ingresa el nombre del producto: ").capitalize()
+        if nuevo_producto in diccionario:
+            print("El producto ya existe.")
+        else:
+            cantidad_nuevo_producto=int(input("Ingresa la cantidad: "))
+            diccionario[nuevo_producto]=cantidad_nuevo_producto
+            print("Producto agregado correctamente")
+        
+    elif opcion==0:
+        print("Saliendo...")
+        break
+    else:
+        print("Opcion fuera de rango.")
+
+        
+#Ejercicio 9
+agenda={
+    ("Lunes","10:00"):"Reunion",
+    ("Martes","09:00"):"Clase de ingles",
+    ("Miercoles", "21:00"):"Futbol"
+}
+dia=input("Ingresa el dia para ver que hay en la agenda: ").capitalize()
+hora=input("Ingresa la hora: ")
+clave=(dia,hora)
+if clave in agenda:
+    print("Ocupado: ", agenda[clave])
+else:
+    print("No tienes nada en la agenda")
  """
 
- 
-    
+#Ejercicio 10
+paises={
+    "Argentina":"Buenos aires",
+    "Chile": "Santiago",
+    "Peru": "Lima"
+}
+invertido={}
+for pais,capital in paises.items():
+    invertido[capital]=pais
+print(paises)
+print(invertido)
+
+
+
