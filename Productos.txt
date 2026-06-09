@@ -1,0 +1,5 @@
+Martillo, 1500, 40
+Clavos, 50, 1300
+Pinza, 4500, 65
+Cinta,150,20
+llave,140,20pepe,4,2
